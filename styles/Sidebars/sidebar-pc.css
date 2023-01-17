@@ -24,14 +24,67 @@
 .sidebar-pc .profile-picture .label {
     position: absolute;
     bottom: 0;
-    height: 20%;
+    height: 30%;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     font-size: 22px;
-    background-color: rgba(0, 0, 0.9, 0.5);
+    background-color: rgba(0, 0, 0.9, 0.4);
+}
+
+.sidebar-pc .page-list {
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-pc .page-list .page {
+    width: 100%;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgb(100, 103, 105);
+    padding-top: 1em;
+    padding-right: 0;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.sidebar-pc .page-list .page.active {
+    background-color: white;
+    color: black;
+}
+.sidebar-pc .page-list .page:hover {
+    background-color: white;
+    color: black;
+}
+
+.sidebar-pc .socials-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    font-size: 30px;
+}
+.sidebar-pc .socials-list a {
+    cursor: pointer;
+    transition: 0.2s;
+}
+.sidebar-pc .socials-list a:hover {
+    color: rgb(137, 137, 236);
 }
 
 @media only screen and (max-width: 768px) {

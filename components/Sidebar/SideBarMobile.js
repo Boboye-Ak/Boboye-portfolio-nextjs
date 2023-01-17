@@ -1,4 +1,4 @@
-const SideBarMobile = () => {
+const SideBarMobile = ({ activePage, setActivePage }) => {
     return <div className="sidebar-mobile">SideBarMobile</div>
 }
 
