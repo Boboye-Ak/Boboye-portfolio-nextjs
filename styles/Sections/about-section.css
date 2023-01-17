@@ -1,0 +1,65 @@
+.section.about .upper-third {
+    position: relative;
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section.about .upper-third .down-arrow {
+    opacity: 1;
+    position: relative;
+    bottom: 0px;
+    font-size: 60px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.section.about .upper-third .down-arrow.hidden {
+    opacity: 0;
+}
+
+.section.about .upper-third .down-arrow:hover {
+    color: blue;
+    bottom: 20px;
+}
+
+.section.about .middle-third {
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section.about .lower-third {
+    position: relative;
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section.about .lower-third .down-arrow {
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    font-size: 60px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.section.about .lower-third .down-arrow.hidden {
+    opacity: 0;
+}
+
+.section.about .lower-third .down-arrow:hover {
+    color: blue;
+    top: 20px;
+}

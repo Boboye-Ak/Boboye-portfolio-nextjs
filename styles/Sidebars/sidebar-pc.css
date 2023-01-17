@@ -37,7 +37,7 @@
 .sidebar-pc .page-list {
     margin-bottom: 20px;
     width: 100%;
-    font-size: 20px;
+    font-size: 22px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,9 +48,11 @@
     border-bottom: solid;
     border-width: 1px;
     border-color: rgb(100, 103, 105);
-    padding-top: 1em;
+    color: rgb(70, 66, 66);
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
     padding-right: 0;
-    padding-bottom: 1em;
+    font-weight: bolder;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -60,8 +62,7 @@
     cursor: pointer;
 }
 .sidebar-pc .page-list .page.active {
-    background-color: white;
-    color: black;
+    color: white;
 }
 .sidebar-pc .page-list .page:hover {
     background-color: white;

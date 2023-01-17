@@ -1,4 +1,8 @@
 .sidebar-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 7;
     width: 80vw;
     height: 100vh;
     background-color: red;
