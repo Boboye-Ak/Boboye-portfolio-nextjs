@@ -13,11 +13,11 @@ export default function Home() {
         <div className={styles.main}>
             <SideBar activePage={activePage} setActivePage={setActivePage} />
             <div className="section-container">
-                <HomeSection activePage={activePage} />
-                <AboutSection activePage={activePage}/>
-                <ResumeSection activePage={activePage}/>
-                <ProjectsSection activePage={activePage}/>
-                <ContactSection activePage={activePage}/>
+                <HomeSection activePage={activePage} setActivePage={setActivePage} />
+                <AboutSection activePage={activePage} setActivePage={setActivePage} />
+                <ResumeSection activePage={activePage} setActivePage={setActivePage} />
+                <ProjectsSection activePage={activePage} setActivePage={setActivePage} />
+                <ContactSection activePage={activePage} setActivePage={setActivePage} />
             </div>
         </div>
     )
