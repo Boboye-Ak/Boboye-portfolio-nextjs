@@ -1,6 +1,9 @@
 import { Icon } from "@iconify/react"
 import { useState } from "react"
 
+const aboutText =
+    "I am a 23 year energetic old full stack web2 and web3 developer passionate about building software solutions that create value and lead to the improvement of the quality of life of people. I am proficient in Javascript(Vanilla JS, ReactJS, NextJS and NodeJS), Python, Solidity (Working with Hardhat, Brownie, Ethers, Web3.js and Web3.py) and several associated technologies"
+
 const AboutSection = ({ activePage, setActivePage }) => {
     const [showArrow, setShowArrow] = useState(true)
     return (
@@ -17,14 +20,7 @@ const AboutSection = ({ activePage, setActivePage }) => {
                 </div>
             </div>
             <div className="middle-third">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                unknown printer took a galley of type and scrambled it to make a type specimen book.
-                It has survived not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                with desktop publishing software like Aldus PageMaker including versions of Lorem
-                Ipsum
+                <p>{aboutText}</p>
             </div>
             <div className="lower-third">
                 {" "}
