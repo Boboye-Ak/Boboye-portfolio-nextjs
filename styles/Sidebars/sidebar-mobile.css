@@ -1,3 +1,12 @@
+.menu-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 8;
+    color: pink;
+    font-size: 50px;
+}
+
 .sidebar-mobile {
     position: absolute;
     top: 0;
@@ -5,12 +14,99 @@
     z-index: 7;
     width: 80vw;
     height: 100vh;
+    background-color: rgb(28, 28, 41);
+    color: white;
+    transition: 0.5s;
+}
+.sidebar-mobile.hidden {
+    left: -100%;
+}
+
+.sidebar-mobile .profile-picture {
+    position: relative;
     background-color: red;
+    width: 100%;
+    height: 35%;
+}
+.sidebar-mobile .profile-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.sidebar-mobile .profile-picture .label {
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0.9, 0.4);
+}
+
+.sidebar-mobile .page-list {
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-mobile .page-list .page {
+    width: 100%;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgb(100, 103, 105);
+    color: rgb(70, 66, 66);
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-right: 0;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.sidebar-mobile .page-list .page.active {
+    color: white;
+}
+.sidebar-mobile .page-list .page:hover {
+    background-color: white;
+    color: black;
+}
+
+.sidebar-mobile .socials-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 22px;
+}
+.sidebar-mobile .socials-list a {
+    cursor: pointer;
+    transition: 0.2s;
+}
+.sidebar-mobile .socials-list a:hover {
+    color: rgb(137, 137, 236);
 }
 
 @media only screen and (min-width: 768px) {
     /* For PCs+: */
     .sidebar-mobile {
+        display: none;
+    }
+    .menu-button {
         display: none;
     }
 }
