@@ -18,7 +18,7 @@ const HomeSection = ({ activePage, setActivePage }) => {
         <div className={`section home ${activePage != "home" && "hidden"}`}>
             <div className="upper-half">
                 <div className="name">
-                    Akinboboye <span>Akinwande</span>
+                    Hi, I'm Akinboboye <span>Akinwande</span>
                 </div>
                 <div className="title">
                     <Typewriter onInit={handleTypewriter} />
@@ -26,7 +26,7 @@ const HomeSection = ({ activePage, setActivePage }) => {
             </div>
             <div className="bottom-half">
                 <div
-                    className={`down-arrow ${!showArrow&&"hidden"}`}
+                    className={`down-arrow ${!showArrow && "hidden"}`}
                     onClick={() => {
                         setActivePage("about")
                     }}

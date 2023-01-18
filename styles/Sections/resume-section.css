@@ -118,6 +118,17 @@
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
+    .section.resume .upper-third {
+        height: 20%;
+    }
+    .section.resume .middle-third {
+        height: 60%;
+    }
+
+    .section.resume .lower-third {
+        height: 20%;
+    }
+
     .section.resume .middle-third .resume-page {
         width: 95%;
     }
