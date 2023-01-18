@@ -54,7 +54,15 @@ const ResumeSection = ({ activePage, setActivePage }) => {
                     <div className="page-label">
                         {resumePageIndex + 1}/{resumePagesImages?.length}
                     </div>
-                    <img src={resumePagesImages[resumePageIndex]} />
+                    {resumePagesImages?.map((page, index) => {
+                        return (
+                            <img
+                                key={index}
+                                src={page}
+                                className={index == resumePageIndex && "active"}
+                            />
+                        )
+                    })}
                     <div
                         className="change-resume-page before"
                         onClick={() => {
