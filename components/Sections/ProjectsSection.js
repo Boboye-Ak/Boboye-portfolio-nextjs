@@ -6,9 +6,16 @@ const projects = [
     {
         name: "Chakra",
         image: "project images/chakra screenshot.PNG",
-        description: "",
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         liveLink: "https://chakra.up.railway.app/",
-        github: [""],
+        github: ["", "", ""],
+        technologiesUsed: [
+            "NextJS for the frontend",
+            "NodeJS for the backend",
+            "Hardhat for the smart contracts",
+            "MongoDB for the Database",
+        ],
     },
     {
         name: "Polygon Timed Safelock",
@@ -16,6 +23,7 @@ const projects = [
         description: "",
         liveLink: "https://polygon-timed-safelock.netlify.app/",
         github: [""],
+        technologiesUsed: [""],
     },
     {
         name: "CrowdFund3r",
@@ -23,6 +31,7 @@ const projects = [
         description: "",
         liveLink: "https://crowdfund3r.netlify.app/",
         github: [""],
+        technologiesUsed: [""],
     },
 ]
 
@@ -35,14 +44,14 @@ const ProjectsSection = ({ activePage, setActivePage }) => {
             if (currentValue < projects.length - 1) {
                 return currentValue + 1
             } else {
-                return currentValue
+                return 0
             }
         })
     }
     const previousProject = () => {
         setCurrentProjectIndex((currentValue) => {
             if (currentValue == 0) {
-                return currentValue
+                return projects.length - 1
             } else {
                 return currentValue - 1
             }
@@ -53,7 +62,7 @@ const ProjectsSection = ({ activePage, setActivePage }) => {
             <div className="upper-third">
                 {" "}
                 <div
-                    className={`down-arrow ${!showArrow && "hidden"}`}
+                    className={`arrow up`}
                     onClick={() => {
                         setActivePage("resume")
                     }}
@@ -62,7 +71,9 @@ const ProjectsSection = ({ activePage, setActivePage }) => {
                 </div>
             </div>
             <div className="middle-third">
-                <div className="header">PROJECTS</div>
+                <div className="header">
+                    PROJECT {currentProjectIndex + 1}/{projects.length}
+                </div>
                 <div
                     className="change-project-set previous"
                     onClick={() => {
@@ -93,7 +104,7 @@ const ProjectsSection = ({ activePage, setActivePage }) => {
             <div className="lower-third">
                 {" "}
                 <div
-                    className={`down-arrow ${!showArrow && "hidden"}`}
+                    className={`arrow down`}
                     onClick={() => {
                         setActivePage("contact")
                     }}

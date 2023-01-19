@@ -16,14 +16,14 @@ const ResumeSection = ({ activePage, setActivePage }) => {
             if (currentPageIndex < resumePagesImages.length - 1) {
                 return currentPageIndex + 1
             } else {
-                return currentPageIndex
+                return 0
             }
         })
     }
     const previousPage = () => {
         setResumePageIndex((currentPageIndex) => {
             if (currentPageIndex == 0) {
-                return currentPageIndex
+                return resumePagesImages.length - 1
             } else {
                 return currentPageIndex - 1
             }
@@ -34,7 +34,7 @@ const ResumeSection = ({ activePage, setActivePage }) => {
             <div className="upper-third">
                 {" "}
                 <div
-                    className={`down-arrow ${!showArrow && "hidden"}`}
+                    className={`arrow up`}
                     onClick={() => {
                         setActivePage("about")
                     }}
@@ -84,7 +84,7 @@ const ResumeSection = ({ activePage, setActivePage }) => {
             <div className="lower-third">
                 {" "}
                 <div
-                    className={`down-arrow ${!showArrow && "hidden"}`}
+                    className={`arrow down`}
                     onClick={() => {
                         setActivePage("projects")
                     }}

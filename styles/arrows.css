@@ -1,0 +1,30 @@
+.arrow {
+    opacity: 1;
+    position: relative;
+    bottom: 0px;
+    font-size: 60px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.arrow.hidden {
+    opacity: 0;
+    bottom: 20px;
+}
+
+.arrow:hover {
+    color: blue;
+}
+.arrow.up {
+    bottom: 0px;
+}
+.arrow.up:hover {
+    bottom: 10px;
+}
+
+.arrow.down {
+    top: 0px;
+}
+.arrow.down:hover {
+    top: 10px;
+}
