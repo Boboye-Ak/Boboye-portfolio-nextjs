@@ -71,9 +71,6 @@ const ProjectsSection = ({ activePage, setActivePage }) => {
                 </div>
             </div>
             <div className="middle-third">
-                <div className="header">
-                    PROJECT {currentProjectIndex + 1}/{projects.length}
-                </div>
                 <div
                     className="change-project-set previous"
                     onClick={() => {

@@ -48,3 +48,11 @@
     cursor: pointer;
     transition: 0.5s;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+    .section.contact .middle-third .social-list .social {
+        font-size: 25px;
+    }
+}
