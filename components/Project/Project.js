@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react"
 import { useState } from "react"
 
-const Project = ({ project, active, projects, key }) => {
+const Project = ({ project, active, projects }) => {
     const [isHovered, setIsHovered] = useState(false)
     const [isClicked, setIsClicked] = useState(false)
     return (
@@ -32,7 +32,6 @@ const Project = ({ project, active, projects, key }) => {
                         className="see-more"
                         onClick={() => {
                             setIsClicked(!isClicked)
-                            
                         }}
                     >
                         Click to see {isClicked ? "less" : "more"}

@@ -15,7 +15,7 @@ const HomeSection = ({ activePage, setActivePage }) => {
     }
 
     return (
-        <div className={`section home ${activePage != "home" && "hidden"}`}>
+        <div className={`section home ${activePage != "home" ? "hidden":undefined}`}>
             <div className="upper-half">
                 <div className="name">
                     Hi, I&apos;m Boboye <span>Akinwande</span>

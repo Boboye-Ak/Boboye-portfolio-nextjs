@@ -48,6 +48,7 @@ const ResumeSection = ({ activePage, setActivePage }) => {
                         className="download-resume"
                         href="Akinboboye Akinwande Resume.pdf"
                         download={true}
+                        title="download resume"
                     >
                         <Icon icon="material-symbols:download" />
                     </a>
@@ -59,7 +60,7 @@ const ResumeSection = ({ activePage, setActivePage }) => {
                             <img
                                 key={index}
                                 src={page}
-                                className={index == resumePageIndex && "active"}
+                                className={index == resumePageIndex ? "active":undefined}
                             />
                         )
                     })}
