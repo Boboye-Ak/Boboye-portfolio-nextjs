@@ -15,10 +15,10 @@ const HomeSection = ({ activePage, setActivePage }) => {
     }
 
     return (
-        <div className={`section home ${activePage != "home" ? "hidden":undefined}`}>
+        <div className={`section home ${activePage != "home" ? "hidden" : undefined}`}>
             <div className="upper-half">
                 <div className="name">
-                    Hi, I&apos;m Boboye <span>Akinwande</span>
+                    Hi, I&apos;m <span>Boboye Akinwande</span>
                 </div>
                 <div className="title">
                     <Typewriter onInit={handleTypewriter} />

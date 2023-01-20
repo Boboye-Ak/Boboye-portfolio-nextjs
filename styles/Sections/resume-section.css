@@ -6,7 +6,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 .section.resume .upper-third .down-arrow {
@@ -30,8 +30,8 @@
 .section.resume .middle-third .resume-page {
     position: relative;
     background-color: white;
-    width: 30%;
-    height: 100%;
+    width: 40%;
+    height: 120%;
 }
 .section.resume .middle-third .resume-page .page-label {
     position: absolute;
@@ -101,7 +101,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
