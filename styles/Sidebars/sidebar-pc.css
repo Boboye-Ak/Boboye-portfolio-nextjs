@@ -89,7 +89,7 @@
     color: rgb(137, 137, 236);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     /* For mobile phones: */
     .sidebar-pc {
         display: none;

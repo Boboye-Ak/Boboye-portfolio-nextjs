@@ -103,7 +103,7 @@
     color: rgb(137, 137, 236);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
     /* For PCs+: */
     .sidebar-mobile {
         display: none;

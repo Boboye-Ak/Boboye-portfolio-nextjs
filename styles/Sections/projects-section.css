@@ -162,7 +162,7 @@
     transition: 0.5s;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     /* For mobile phones: */
     .section.projects .upper-third {
         height: 20%;

@@ -114,7 +114,7 @@
     transition: 0.5s;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     /* For mobile phones: */
     .section.resume .upper-third {
         height: 20%;

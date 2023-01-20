@@ -38,7 +38,6 @@
 .section.about .middle-third p {
     width: 80%;
     text-align: center;
-    
 }
 
 .section.about .lower-third {
@@ -69,7 +68,7 @@
     top: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width:1024px) {
     /* For mobile phones: */
     .section.about .upper-third {
         height: 20%;
