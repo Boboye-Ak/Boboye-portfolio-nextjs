@@ -49,6 +49,7 @@ const projects = [
             "NextJS For the Frontend",
             "Solidity using Hardhat for the smart contracts",
             "Mocha for the smart contract testing",
+            "NFT.Storage for reading and retrieving files from IPFS",
         ],
     },
     {

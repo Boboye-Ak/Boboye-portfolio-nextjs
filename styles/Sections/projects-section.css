@@ -48,11 +48,36 @@
 }
 
 .section.projects .middle-third .projects-container .project {
+    position: relative;
     width: 70%;
     height: 90%;
     border-radius: 6px;
     cursor: pointer;
     transition: 0.5s;
+}
+.section.projects .middle-third .projects-container .project .project-name-container {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section.projects .middle-third .projects-container .project .project-name-container .project-name {
+    width: 35%;
+    height: 100%;
+    color: aqua;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bolder;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 .section.projects .middle-third .projects-container .project.clicked {
@@ -61,7 +86,7 @@
 }
 
 .section.projects .middle-third .projects-container .project .cover-film {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -81,7 +106,7 @@
 }
 .section.projects .middle-third .projects-container .project .cover-film .description {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .section.projects .middle-third .projects-container .project .cover-film .see-more {
@@ -188,6 +213,10 @@
     .section.projects .middle-third .projects-container .project {
         width: 95%;
         height: 60%;
+    }
+
+    .section.projects .middle-third .projects-container .project .cover-film .description {
+        font-size: 1em;
     }
     .section.projects .middle-third .projects-container .project.clicked {
         width: 90%;
