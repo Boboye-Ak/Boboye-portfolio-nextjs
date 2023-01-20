@@ -118,6 +118,8 @@
     /* For mobile phones: */
     .section.resume .upper-third {
         height: 20%;
+        justify-content: center;
+        align-items: flex-end;
     }
     .section.resume .middle-third {
         height: 60%;
@@ -125,6 +127,8 @@
 
     .section.resume .lower-third {
         height: 20%;
+        justify-content: center;
+        align-items: flex-start;
     }
 
     .section.resume .middle-third .resume-page {

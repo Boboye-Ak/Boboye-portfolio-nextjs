@@ -168,6 +168,7 @@
     .section.projects .upper-third {
         height: 20%;
         align-items: flex-end;
+        justify-content: center;
     }
     .section.projects .middle-third {
         height: 60%;
@@ -175,6 +176,10 @@
     .section.projects .lower-third {
         height: 20%;
         align-items: flex-start;
+        justify-content: center;
+    }
+    .section.projects .middle-third .header {
+        font-size: 30px;
     }
 
     .section.projects .middle-third .projects-container {

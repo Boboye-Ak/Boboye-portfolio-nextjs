@@ -72,12 +72,14 @@
     /* For mobile phones: */
     .section.about .upper-third {
         height: 20%;
+        justify-content: center;
     }
     .section.about .middle-third {
         height: 60%;
     }
     .section.about .lower-third {
         height: 20%;
+        justify-content: center;
     }
     .section.about .middle-third p {
         width: 90%;

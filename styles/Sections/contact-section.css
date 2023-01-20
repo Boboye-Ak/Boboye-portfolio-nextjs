@@ -56,4 +56,10 @@
     .section.contact .middle-third .social-list .social {
         font-size: 25px;
     }
+    .section.contact .upper-third {
+        justify-content: center;
+    }
+    .section.contact .lower-third {
+        justify-content: center;
+    }
 }
