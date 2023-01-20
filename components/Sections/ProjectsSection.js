@@ -39,7 +39,7 @@ const projects = [
         name: "CrowdFund3r",
         image: "project images/crowdfund3r screenshot.jpeg",
         description:
-            "The first of its kind that I know of. It is a website for those in need of financial aid from the public to crowdfund and receive donations in ethereum. As well as providing protection of donors from fraud. ",
+            "The first of its kind that I know of. It is a website for those in need of financial aid from the public to crowdfund and receive donations in ethereum. It provides a crowdunding platform for people in countries like mine that have limited access to traditional crowdfunding platforms like gofundme. It also provides protection of donors from fraud.",
         liveLink: "https://crowdfund3r.netlify.app/",
         github: [
             "https://github.com/Boboye-Ak/nextjs-go-fund-me3",

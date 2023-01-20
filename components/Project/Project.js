@@ -26,7 +26,7 @@ const Project = ({ project, active, projects }) => {
                     backgroundRepeat: "no-repeat",
                 }}
             >
-                <div className={`cover-film ${isHovered && "active"} ${isClicked && "clicked"}`}>
+                <div className={`cover-film ${(isHovered||isClicked) && "active"} ${isClicked && "clicked"}`}>
                     <p className="description">{project?.description}</p>
                     <p
                         className="see-more"
