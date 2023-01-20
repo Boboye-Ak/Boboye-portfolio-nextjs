@@ -1,5 +1,7 @@
 body {
     background-image: url("/background/background.jpg");
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .section-container {
@@ -8,7 +10,7 @@ body {
     height: 100vh;
 }
 .section {
-  color: white;
+    color: white;
     position: absolute;
     top: 0;
     left: 0;

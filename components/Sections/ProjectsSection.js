@@ -7,31 +7,47 @@ const projects = [
         name: "Chakra",
         image: "project images/chakra screenshot.PNG",
         description:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "An application for purchasing Airtime, Data Subscriptions, Bill Payments and Giftcard Purchases using tokens on different EVM blockchains",
         liveLink: "https://chakra.up.railway.app/",
-        github: ["", "", ""],
+        github: [],
         technologiesUsed: [
             "NextJS for the frontend",
             "NodeJS for the backend",
-            "Hardhat for the smart contracts",
+            "Solidity using Hardhat for the smart contracts",
+            "Mocha for the smart contract testing",
+            "Moralis Streams and Moralis SDK for blockchain querying",
             "MongoDB for the Database",
         ],
     },
     {
         name: "Polygon Timed Safelock",
         image: "project images/Timed safelock screenshot.PNG",
-        description: "",
+        description:
+            "I built smart contracts, wrote mocha tests and deploy scripts for smart contracts(for EVM compatible chains) that control a dapp that allows wallets lock up layer 1 tokens till a preset time has elapsed for them or a preset third part wallet only to withdraw.",
         liveLink: "https://polygon-timed-safelock.netlify.app/",
-        github: [""],
-        technologiesUsed: [""],
+        github: [
+            "https://github.com/Boboye-Ak/hardhat-timed-safelock",
+            "https://github.com/Boboye-Ak/nextjs-timed-safelock",
+        ],
+        technologiesUsed: [
+            "NextJS For the Frontend",
+            "Solidity using Hardhat for the smart contracts",
+            "Mocha for the smart contract testing",
+        ],
     },
     {
         name: "CrowdFund3r",
         image: "project images/crowdfund3r screenshot.jpeg",
-        description: "",
+        description:
+            "The first of its kind that I know of. It is a website for those in need of financial aid from the public to crowdfund and receive donations in ethereum. As well as providing protection of donors from fraud. ",
         liveLink: "https://crowdfund3r.netlify.app/",
-        github: [""],
-        technologiesUsed: [""],
+        github: [
+            "https://github.com/Boboye-Ak/nextjs-go-fund-me3",
+            "https://github.com/Boboye-Ak/hardhat-go-fund-me-3",
+        ],
+        technologiesUsed: ["NextJS For the Frontend",
+        "Solidity using Hardhat for the smart contracts",
+        "Mocha for the smart contract testing",],
     },
 ]
 
