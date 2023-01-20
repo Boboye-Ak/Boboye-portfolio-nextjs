@@ -1,7 +1,16 @@
 body {
-    background-image: url("/background/background.jpg");
+    background-image: url("/backgrounds/background-1.jpg");
+    background-size: "100% 100%";
+    background-repeat: no-repeat;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
         Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For PCs+: */
+    body {
+        background-image: url("/backgrounds/background-1.jpg");
+    }
 }
 
 .section-container {

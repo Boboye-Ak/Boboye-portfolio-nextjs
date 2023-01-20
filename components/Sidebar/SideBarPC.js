@@ -59,16 +59,20 @@ const SideBarPC = ({ activePage, setActivePage }) => {
                 </div>
             </div>
             <div className="socials-list">
-                <a>
+                <a href="https://github.com/Boboye-Ak" target="_blank" rel="noopener noreferrer">
                     <Icon icon="bi:github" />
                 </a>
-                <a>
+                <a
+                    href="https://www.linkedin.com/in/akinboboye-akinwande-782552106/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <Icon icon="bi:linkedin" />
                 </a>
-                <a>
+                <a href="https://twitter.com/Ak_Bob_oye" target="_blank" rel="noopener noreferrer">
                     <Icon icon="bi:twitter" />
                 </a>
-                <a>
+                <a href="mailto:boboye771@gmail.com" target="_blank" rel="noopener noreferrer">
                     <Icon icon="mdi:gmail" />
                 </a>
             </div>

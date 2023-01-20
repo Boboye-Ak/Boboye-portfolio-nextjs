@@ -25,7 +25,7 @@ const AboutSection = ({ activePage, setActivePage }) => {
             <div className="lower-third">
                 {" "}
                 <div
-                    className={`arrow down ${!showArrow && "hidden"}`}
+                    className={`arrow down`}
                     onClick={() => {
                         setActivePage("resume")
                     }}

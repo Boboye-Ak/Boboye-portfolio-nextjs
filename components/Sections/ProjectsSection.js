@@ -45,9 +45,21 @@ const projects = [
             "https://github.com/Boboye-Ak/nextjs-go-fund-me3",
             "https://github.com/Boboye-Ak/hardhat-go-fund-me-3",
         ],
-        technologiesUsed: ["NextJS For the Frontend",
-        "Solidity using Hardhat for the smart contracts",
-        "Mocha for the smart contract testing",],
+        technologiesUsed: [
+            "NextJS For the Frontend",
+            "Solidity using Hardhat for the smart contracts",
+            "Mocha for the smart contract testing",
+        ],
+    },
+    {
+        name: "Web3 Enlightenment",
+        image: "project images/Web3 Enlightenment screenshot.PNG",
+        description:
+            "Taught a group of friends the fundamentals of what Web3 and the blockchain are",
+        liveLink:
+            "https://drive.google.com/file/d/1WaqZTfNdLWne6Zj6eZq_o1RbAWeXgmLH/view?usp=share_link",
+        github: [],
+        technologiesUsed: ["Zoom", "Microsoft Powerpoint"],
     },
 ]
 

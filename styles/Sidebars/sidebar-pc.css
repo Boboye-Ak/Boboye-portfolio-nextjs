@@ -83,6 +83,7 @@
 .sidebar-pc .socials-list a {
     cursor: pointer;
     transition: 0.2s;
+    color: white;
 }
 .sidebar-pc .socials-list a:hover {
     color: rgb(137, 137, 236);

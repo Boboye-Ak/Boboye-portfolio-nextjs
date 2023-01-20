@@ -51,7 +51,6 @@
 }
 
 .section.about .lower-third .down-arrow {
-    
     opacity: 1;
     position: relative;
     top: 0px;
@@ -71,8 +70,18 @@
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
+    .section.about .upper-third {
+        height: 20%;
+    }
+    .section.about .middle-third {
+        height: 60%;
+    }
+    .section.about .lower-third {
+        height: 20%;
+    }
     .section.about .middle-third p {
         width: 90%;
+        
     }
 
     .section.about .middle-third p {
