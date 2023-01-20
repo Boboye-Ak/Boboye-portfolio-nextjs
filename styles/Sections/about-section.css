@@ -38,6 +38,7 @@
 .section.about .middle-third p {
     width: 80%;
     text-align: center;
+    
 }
 
 .section.about .lower-third {
@@ -81,7 +82,6 @@
     }
     .section.about .middle-third p {
         width: 90%;
-        
     }
 
     .section.about .middle-third p {

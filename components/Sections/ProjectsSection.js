@@ -99,6 +99,7 @@ const ProjectsSection = ({ activePage, setActivePage }) => {
                 </div>
             </div>
             <div className="middle-third">
+                <div className="header">Here are some of my Projects</div>
                 <div
                     className="change-project-set previous"
                     onClick={() => {
