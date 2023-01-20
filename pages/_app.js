@@ -13,7 +13,14 @@ import { Inter } from "@next/font/google"
 const inter = Inter({ subsets: ["latin"] })
 
 export default function App({ Component, pageProps }) {
-    const iconSelector = Math.floor(Math.random()) % 2
+    const boboyeBitmojis = [
+        "bitmojis/Boboye Bitmoji.jpeg",
+        "bitmojis/Boboye Bitmoji-2.jpeg",
+        "bitmojis/Boboye Bitmoji-3.jpeg",
+        "bitmojis/Boboye Bitmoji-4.jpeg",
+    ]
+    const iconSelector = Math.floor(Math.random() * 100) % boboyeBitmojis.length
+
     return (
         <>
             {" "}
@@ -21,10 +28,7 @@ export default function App({ Component, pageProps }) {
                 <title>Create Next App</title>
                 <meta name="description" content="Boboye's Portfolio" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link
-                    rel="icon"
-                    href={iconSelector ? "Boboye Bitmoji.jpeg" : "Boboye Bitmoji-2.jpeg"}
-                />
+                <link rel="icon" href={boboyeBitmojis[iconSelector]} />
             </Head>
             <Component {...pageProps} />
         </>

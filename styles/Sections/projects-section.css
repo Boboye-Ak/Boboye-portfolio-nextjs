@@ -165,14 +165,14 @@
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .section.projects .upper-third {
-        height: 25%;
+        height: 20%;
         align-items: flex-end;
     }
     .section.projects .middle-third {
-        height: 50%;
+        height: 60%;
     }
     .section.projects .lower-third {
-        height: 25%;
+        height: 20%;
         align-items: flex-start;
     }
 
