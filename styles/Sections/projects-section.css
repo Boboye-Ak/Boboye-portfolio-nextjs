@@ -65,8 +65,9 @@
 }
 
 .section.projects .middle-third .projects-container .project .project-name-container .project-name {
-    width: 35%;
-    height: 100%;
+    min-width: 35%;
+    width: fit-content;
+    min-height: 100%;
     color: aqua;
     background-color: black;
     text-align: center;
