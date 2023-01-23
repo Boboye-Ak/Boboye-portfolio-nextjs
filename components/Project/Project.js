@@ -26,7 +26,9 @@ const Project = ({ project, active, projects }) => {
                     backgroundRepeat: "no-repeat",
                 }}
             >
-                <div className="project-name-container"><div className="project-name">{project?.name}</div></div>
+                <div className="project-name-container">
+                    <div className="project-name">{project?.name}</div>
+                </div>
                 <div
                     className={`cover-film ${(isHovered || isClicked) && "active"} ${
                         isClicked && "clicked"

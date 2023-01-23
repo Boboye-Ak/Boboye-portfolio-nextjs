@@ -13,7 +13,7 @@
 }
 
 .arrow:hover {
-    color: blue;
+    color: aqua;
 }
 .arrow.up {
     bottom: 0px;

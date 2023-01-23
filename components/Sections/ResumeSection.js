@@ -60,7 +60,7 @@ const ResumeSection = ({ activePage, setActivePage }) => {
                             <img
                                 key={index}
                                 src={page}
-                                className={index == resumePageIndex ? "active":undefined}
+                                className={index == resumePageIndex ? "active" : undefined}
                             />
                         )
                     })}
