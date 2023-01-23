@@ -14,14 +14,31 @@ body {
         Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.scroll-bar {
+    width: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    height: 100%;
+    background-color: rgb(20, 17, 17);
+}
+.scroll-bar .division {
+    height: 20%;
+    transition: 0.5s;
+}
+.scroll-bar .division.active {
+    background-color: aqua;
+}
+
 @media only screen and (min-width: 1024px) {
     /* For PCs+: */
-   /* html {
+    html {
         background-image: url("/backgrounds/background-5.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-color: rgb(17, 11, 56);
-    }*/
+    }
 }
 .section-container {
     position: relative;

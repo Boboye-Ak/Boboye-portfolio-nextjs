@@ -6,6 +6,7 @@ import AboutSection from "@/components/Sections/AboutSection"
 import ResumeSection from "@/components/Sections/ResumeSection"
 import ProjectsSection from "@/components/Sections/ProjectsSection"
 import ContactSection from "@/components/Sections/ContactSection"
+import ScrollBar from "@/components/ScrollBar/ScrollBar"
 
 export default function Home() {
     const [activePage, setActivePage] = useState("home")
@@ -29,6 +30,7 @@ export default function Home() {
 
     return (
         <div className={styles.main}>
+            <ScrollBar activePage={activePage} />
             <SideBar activePage={activePage} setActivePage={setActivePage} />
             <div className="section-container">
                 <HomeSection activePage={activePage} setActivePage={setActivePage} />

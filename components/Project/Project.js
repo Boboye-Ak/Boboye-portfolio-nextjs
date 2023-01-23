@@ -46,6 +46,12 @@ const Project = ({ project, active, projects }) => {
                 </div>
             </div>
             <div className={`project-details ${isClicked && "clicked"}`}>
+
+                <ul>
+                    {project?.technologiesUsed.map((technology, index) => {
+                        return <li key={index}>{technology}</li>
+                    })}
+                </ul>
                 <div className="project-links live-link">
                     <a href={project?.liveLink} target="_blank" rel="noopener noreferrer">
                         <Icon icon="mdi:internet" />
@@ -60,11 +66,6 @@ const Project = ({ project, active, projects }) => {
                         )
                     })}
                 </div>
-                <ul>
-                    {project?.technologiesUsed.map((technology, index) => {
-                        return <li key={index}>{technology}</li>
-                    })}
-                </ul>
             </div>
         </div>
     )
