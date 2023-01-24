@@ -30,7 +30,7 @@ export default function Home() {
 
     return (
         <div className={styles.main}>
-            <ScrollBar activePage={activePage} />
+            <ScrollBar activePage={activePage} setActivePage={setActivePage}/>
             <SideBar activePage={activePage} setActivePage={setActivePage} />
             <div className="section-container">
                 <HomeSection activePage={activePage} setActivePage={setActivePage} />
