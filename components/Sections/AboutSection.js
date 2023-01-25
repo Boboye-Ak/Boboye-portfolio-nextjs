@@ -7,9 +7,16 @@ const aboutText =
 
 const AboutSection = ({ activePage, setActivePage }) => {
     const [showArrow, setShowArrow] = useState(true)
+    const [hasBeenViewed, setHasBeenViewed] = useState(false)
 
     const handleTypewriter = (typewriter) => {
-        typewriter.pauseFor(500).typeString(aboutText).start()
+        typewriter
+            .pauseFor(500)
+            .typeString(aboutText)
+            .callFunction(() => {
+                setHasBeenViewed(true)
+            })
+            .start()
     }
     return (
         <div className={`section about ${activePage != "about" && "hidden"}`}>
@@ -25,7 +32,7 @@ const AboutSection = ({ activePage, setActivePage }) => {
                 </div>
             </div>
             <div className="middle-third">
-                <p>{activePage == "about" && <Typewriter onInit={handleTypewriter} />}</p>
+                <p>{(activePage == "about"||hasBeenViewed) && <Typewriter onInit={handleTypewriter} />}</p>
             </div>
             <div className="lower-third">
                 {" "}
