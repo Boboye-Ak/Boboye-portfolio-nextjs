@@ -44,6 +44,7 @@ body {
     position: relative;
     width: 80vw;
     height: 100vh;
+    overflow: hidden;
 }
 .section {
     color: white;
@@ -60,6 +61,7 @@ body {
 .section.hidden {
     opacity: 0;
     z-index: 1;
+    top:100%;
 }
 
 @media only screen and (max-width: 1024px) {

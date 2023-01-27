@@ -11,11 +11,11 @@ const AboutSection = ({ activePage, setActivePage }) => {
 
     const handleTypewriter = (typewriter) => {
         typewriter
-            .pauseFor(500)
-            .typeString(aboutText)
             .callFunction(() => {
                 setHasBeenViewed(true)
             })
+            .typeString(aboutText)
+
             .start()
     }
     return (
@@ -32,7 +32,11 @@ const AboutSection = ({ activePage, setActivePage }) => {
                 </div>
             </div>
             <div className="middle-third">
-                <p>{(activePage == "about"||hasBeenViewed) && <Typewriter onInit={handleTypewriter} />}</p>
+                <p>
+                    {(activePage == "about" || hasBeenViewed) && (
+                        <Typewriter onInit={handleTypewriter} />
+                    )}
+                </p>
             </div>
             <div className="lower-third">
                 {" "}
