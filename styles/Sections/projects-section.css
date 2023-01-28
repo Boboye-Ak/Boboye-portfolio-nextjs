@@ -148,7 +148,7 @@
     font-family: monospace;
 }
 .section.projects .middle-third .projects-container .project-details.clicked ul li:before {
-    content: " >";
+    
 }
 
 .section.projects .middle-third .change-project-set {

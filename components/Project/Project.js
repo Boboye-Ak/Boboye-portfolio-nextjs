@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react"
 import { useState } from "react"
+import Typewriter from "typewriter-effect"
 
 const Project = ({ project, active, projects }) => {
     const [isHovered, setIsHovered] = useState(false)
@@ -46,10 +47,19 @@ const Project = ({ project, active, projects }) => {
                 </div>
             </div>
             <div className={`project-details ${isClicked && "clicked"}`}>
-
                 <ul>
                     {project?.technologiesUsed.map((technology, index) => {
-                        return <li key={index}>{technology}</li>
+                        return (
+                            <li key={index}>
+                                {isClicked && (
+                                    <Typewriter
+                                        onInit={(typewriter) => {
+                                            typewriter.typeString(`> ${technology}`).start()
+                                        }}
+                                    />
+                                )}
+                            </li>
+                        )
                     })}
                 </ul>
                 <div className="project-links live-link">
