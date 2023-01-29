@@ -10,6 +10,25 @@ import ScrollBar from "@/components/ScrollBar/ScrollBar"
 
 export default function Home() {
     const [activePage, setActivePage] = useState("home")
+    const [previousPage, setPreviousPage] = useState("contact")
+
+    useEffect(() => {
+        if (activePage == "home") {
+            setPreviousPage("contact")
+        }
+        if (activePage == "about") {
+            setPreviousPage("home")
+        }
+        if (activePage == "resume") {
+            setPreviousPage("about")
+        }
+        if (activePage == "projects") {
+            setPreviousPage("resume")
+        }
+        if (activePage == "contact") {
+            setPreviousPage("projects")
+        }
+    }, [activePage])
     const handleEnterButton = () => {
         if (activePage == "home") {
             setActivePage("about")
@@ -30,14 +49,49 @@ export default function Home() {
 
     return (
         <div className={styles.main}>
-            <ScrollBar activePage={activePage} setActivePage={setActivePage}/>
-            <SideBar activePage={activePage} setActivePage={setActivePage} />
+            <ScrollBar
+                activePage={activePage}
+                setActivePage={setActivePage}
+                previousPage={previousPage}
+                setPreviousPage={setPreviousPage}
+            />
+            <SideBar
+                activePage={activePage}
+                setActivePage={setActivePage}
+                previousPage={previousPage}
+                setPreviousPage={setPreviousPage}
+            />
             <div className="section-container">
-                <HomeSection activePage={activePage} setActivePage={setActivePage} />
-                <AboutSection activePage={activePage} setActivePage={setActivePage} />
-                <ResumeSection activePage={activePage} setActivePage={setActivePage} />
-                <ProjectsSection activePage={activePage} setActivePage={setActivePage} />
-                <ContactSection activePage={activePage} setActivePage={setActivePage} />
+                <HomeSection
+                    activePage={activePage}
+                    setActivePage={setActivePage}
+                    previousPage={previousPage}
+                    setPreviousPage={setPreviousPage}
+                />
+                <AboutSection
+                    activePage={activePage}
+                    setActivePage={setActivePage}
+                    previousPage={previousPage}
+                    setPreviousPage={setPreviousPage}
+                />
+                <ResumeSection
+                    activePage={activePage}
+                    setActivePage={setActivePage}
+                    previousPage={previousPage}
+                    setPreviousPage={setPreviousPage}
+                />
+                <ProjectsSection
+                    activePage={activePage}
+                    setActivePage={setActivePage}
+                    previousPage={previousPage}
+                    setPreviousPage={setPreviousPage}
+                />
+                <ContactSection
+                    activePage={activePage}
+                    setActivePage={setActivePage}
+                    previousPage={previousPage}
+                    setPreviousPage={setPreviousPage}
+                />
             </div>
         </div>
     )

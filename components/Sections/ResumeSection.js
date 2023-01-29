@@ -7,7 +7,7 @@ const resumePagesImages = [
     "resume pages/Akinboboye Akinwande Resume_03.jpg",
 ]
 
-const ResumeSection = ({ activePage, setActivePage }) => {
+const ResumeSection = ({ activePage, setActivePage, previousPage: previousSection }) => {
     const [showArrow, setShowArrow] = useState(true)
     const [resumePageIndex, setResumePageIndex] = useState(0)
 
@@ -30,7 +30,11 @@ const ResumeSection = ({ activePage, setActivePage }) => {
         })
     }
     return (
-        <div className={`section resume ${activePage != "resume" && "hidden"}`}>
+        <div
+            className={`section resume ${activePage != "resume" && "hidden"} ${
+                previousSection == "resume" && "previous"
+            }`}
+        >
             <div className="upper-third">
                 {" "}
                 <div

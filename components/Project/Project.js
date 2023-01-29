@@ -5,6 +5,7 @@ import Typewriter from "typewriter-effect"
 const Project = ({ project, active, projects }) => {
     const [isHovered, setIsHovered] = useState(false)
     const [isClicked, setIsClicked] = useState(false)
+    const [hasBeenClicked, setHasBeenClicked] = useState(false)
     return (
         <div
             className={`projects-container ${active && "active"} ${isClicked && "clicked"}`}
@@ -18,6 +19,7 @@ const Project = ({ project, active, projects }) => {
             <div
                 onClick={() => {
                     setIsClicked(!isClicked)
+                    setHasBeenClicked(true)
                     setIsHovered(false)
                 }}
                 className={`project ${isClicked && "clicked"}`}
@@ -51,7 +53,7 @@ const Project = ({ project, active, projects }) => {
                     {project?.technologiesUsed.map((technology, index) => {
                         return (
                             <li key={index}>
-                                {isClicked && (
+                                {(isClicked||hasBeenClicked) && (
                                     <Typewriter
                                         onInit={(typewriter) => {
                                             typewriter.typeString(`> ${technology}`).start()

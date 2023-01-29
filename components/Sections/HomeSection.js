@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react"
 import { useState } from "react"
 import Typewriter from "typewriter-effect"
 
-const HomeSection = ({ activePage, setActivePage }) => {
+const HomeSection = ({ activePage, setActivePage, previousPage }) => {
     const [showArrow, setShowArrow] = useState(false)
     const handleTypewriter = (typewriter) => {
         typewriter
@@ -15,7 +15,11 @@ const HomeSection = ({ activePage, setActivePage }) => {
     }
 
     return (
-        <div className={`section home ${activePage != "home" ? "hidden" : undefined}`}>
+        <div
+            className={`section home ${activePage != "home" ? "hidden" : undefined} ${
+                previousPage == "home" && "previous"
+            }`}
+        >
             <div className="upper-half">
                 <div className="name">
                     Hi, I&apos;m <span>Boboye Akinwande</span>

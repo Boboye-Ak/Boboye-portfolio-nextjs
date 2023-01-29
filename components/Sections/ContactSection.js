@@ -1,10 +1,14 @@
 import { Icon } from "@iconify/react"
 import { useState } from "react"
 
-const ContactSection = ({ activePage, setActivePage }) => {
+const ContactSection = ({ activePage, setActivePage, previousPage }) => {
     const [showArrow, setShowArrow] = useState(true)
     return (
-        <div className={`section contact ${activePage != "contact" && "hidden"}`}>
+        <div
+            className={`section contact ${activePage != "contact" && "hidden"} ${
+                previousPage == "contact" && "previous"
+            }`}
+        >
             <div className="upper-third">
                 {" "}
                 <div

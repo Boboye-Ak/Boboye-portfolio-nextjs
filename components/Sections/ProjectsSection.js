@@ -64,7 +64,7 @@ const projects = [
     },
 ]
 
-const ProjectsSection = ({ activePage, setActivePage }) => {
+const ProjectsSection = ({ activePage, setActivePage, previousPage }) => {
     const [showArrow, setShowArrow] = useState(true)
     const [currentProjectIndex, setCurrentProjectIndex] = useState(0)
 
@@ -87,7 +87,7 @@ const ProjectsSection = ({ activePage, setActivePage }) => {
         })
     }
     return (
-        <div className={`section projects ${activePage != "projects" && "hidden"}`}>
+        <div className={`section projects ${activePage != "projects" && "hidden"} ${previousPage=="projects"&& "previous"}`}>
             <div className="upper-third">
                 {" "}
                 <div
