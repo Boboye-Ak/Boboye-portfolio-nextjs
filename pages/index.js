@@ -11,6 +11,36 @@ import ScrollBar from "@/components/ScrollBar/ScrollBar"
 export default function Home() {
     const [activePage, setActivePage] = useState("home")
     const [previousPage, setPreviousPage] = useState("contact")
+    const handleEnterButton = () => {
+        if (activePage == "home") {
+            setActivePage("about")
+        }
+        if (activePage == "about") {
+            setActivePage("resume")
+        }
+        if (activePage == "resume") {
+            setActivePage("projects")
+        }
+        if (activePage == "projects") {
+            setActivePage("contact")
+        }
+        if (activePage == "contact") {
+            setActivePage("home")
+        }
+    }
+
+    useEffect(() => {
+        const keyDownHandler = (event) => {
+            if (event.key === "Enter") {
+                handleEnterButton()
+            }
+        }
+        document.addEventListener("keydown", keyDownHandler)
+
+        return () => {
+            document.removeEventListener("keydown", keyDownHandler)
+        }
+    })
 
     useEffect(() => {
         if (activePage == "home") {
@@ -29,23 +59,6 @@ export default function Home() {
             setPreviousPage("projects")
         }
     }, [activePage])
-    const handleEnterButton = () => {
-        if (activePage == "home") {
-            setActivePage("about")
-        }
-        if (activePage == "about") {
-            setActivePage("resume")
-        }
-        if (activePage == "resume") {
-            setActivePage("projects")
-        }
-        if (activePage == "projects") {
-            setActivePage("contact")
-        }
-        if (activePage == "contact") {
-            setActivePage("home")
-        }
-    }
 
     return (
         <div className={styles.main}>
