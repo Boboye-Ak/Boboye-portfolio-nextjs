@@ -1,18 +1,10 @@
 import { Icon } from "@iconify/react"
 import { useState } from "react"
 import Typewriter from "typewriter-effect"
+import { motion } from "framer-motion"
 
 const HomeSection = ({ activePage, setActivePage, previousPage }) => {
-    const [showArrow, setShowArrow] = useState(false)
-    const handleTypewriter = (typewriter) => {
-        typewriter
-            .pauseFor(500)
-            .typeString("I am a FullStack Web2/Web3 Developer")
-            .callFunction(() => {
-                setShowArrow(true)
-            })
-            .start()
-    }
+    const [showArrow, setShowArrow] = useState(true)
 
     return (
         <div
@@ -21,22 +13,35 @@ const HomeSection = ({ activePage, setActivePage, previousPage }) => {
             }`}
         >
             <div className="upper-half">
-                <div className="name">
+                <motion.div
+                    className="name"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                >
                     Hi, I&apos;m <span>Boboye Akinwande</span>
-                </div>
-                <div className="title">
-                    <Typewriter onInit={handleTypewriter} />
-                </div>
+                </motion.div>
+                <motion.div
+                    className="title"
+                    initial={{ x: "-100vw" }}
+                    animate={{ x: 0 }}
+                    transition={{ delay: 0.7,  type: "spring", stiffness: 120 }}
+                >
+                    I am a FullStack Web2/Web3 Developer
+                </motion.div>
             </div>
             <div className="bottom-half">
-                <div
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 2.0, type: "tween", duration: 0.4 }}
                     className={`arrow down ${!showArrow && "hidden"}`}
                     onClick={() => {
                         setActivePage("about")
                     }}
                 >
                     <Icon icon="ic:outline-arrow-circle-down" />
-                </div>
+                </motion.div>
             </div>
         </div>
     )

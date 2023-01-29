@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react"
 import { useState } from "react"
+import { motion } from "framer-motion"
 
 const resumePagesImages = [
     "resume pages/Akinboboye Akinwande Resume_01.jpg",
@@ -10,6 +11,7 @@ const resumePagesImages = [
 const ResumeSection = ({ activePage, setActivePage, previousPage: previousSection }) => {
     const [showArrow, setShowArrow] = useState(true)
     const [resumePageIndex, setResumePageIndex] = useState(0)
+    const [hasBeenViewed, setHasBeenViewed] = useState(false)
 
     const nextPage = () => {
         setResumePageIndex((currentPageIndex) => {
@@ -47,7 +49,7 @@ const ResumeSection = ({ activePage, setActivePage, previousPage: previousSectio
                 </div>
             </div>
             <div className="middle-third">
-                <div className="resume-page">
+                {(activePage=="resume"||hasBeenViewed)&&<div className="resume-page">
                     <a
                         className="download-resume"
                         href="Akinboboye Akinwande Resume.pdf"
@@ -84,7 +86,7 @@ const ResumeSection = ({ activePage, setActivePage, previousPage: previousSectio
                     >
                         <Icon icon="material-symbols:navigate-next" />
                     </div>
-                </div>
+                </div>}
             </div>
             <div className="lower-third">
                 {" "}
