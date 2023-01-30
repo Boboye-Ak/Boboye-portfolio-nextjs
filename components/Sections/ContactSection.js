@@ -1,8 +1,15 @@
 import { Icon } from "@iconify/react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
 
 const ContactSection = ({ activePage, setActivePage, previousPage }) => {
-    const [showArrow, setShowArrow] = useState(true)
+    const [hasBeenViewed, setHasBeenViewed] = useState(false)
+
+    useEffect(() => {
+        if (!hasBeenViewed && activePage == "contact") {
+            setHasBeenViewed(true)
+        }
+    }, [activePage])
     return (
         <div
             className={`section contact ${activePage != "contact" && "hidden"} ${
@@ -21,44 +28,40 @@ const ContactSection = ({ activePage, setActivePage, previousPage }) => {
                 </div>
             </div>
             <div className="middle-third">
-                <div className="social-list">
-                    {" "}
-                    <div className="social">
-                        <span>
-                            <Icon icon="material-symbols:contact-phone" />
-                        </span>
-                        {"    "}
-                        <span>+2348120460453</span>
+                {(activePage == "contact" || hasBeenViewed) && (
+                    <div className="social-list">
+                        <motion.div
+                            className="social-row"
+                            initial={{ x: "-100vw" }}
+                            animate={{ x: "0" }}
+                            transition={{ type: "spring", stiffness: 120, delay: 0.3 }}
+                        >
+                            <motion.div className="social">
+                                <Icon icon="material-symbols:contact-phone" />
+                            </motion.div>
+                            <motion.div className="social">
+                                <Icon icon="logos:google-gmail" />
+                            </motion.div>
+                            <motion.div className="social">
+                                <Icon icon="uiw:linkedin" />
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                            className="social-row"
+                            initial={{ x: "100vw" }}
+                            animate={{ x: "0" }}
+                            transition={{ type: "spring", stiffness: 120, delay: 0.3 }}
+                        >
+                            <motion.div className="social">
+                                <Icon icon="bi:github" />
+                            </motion.div>
+                            <motion.div className="social">
+                                <Icon icon="icon-park:twitter" />
+                            </motion.div>
+                            <motion.div className="social"><Icon icon="skill-icons:instagram"/></motion.div>
+                        </motion.div>
                     </div>
-                    <div className="social">
-                        <span>
-                            <Icon icon="logos:google-gmail" />
-                        </span>
-                        {"    "}
-                        <span>boboye771@gmail.com</span>
-                    </div>
-                    <div className="social">
-                        <span>
-                            <Icon icon="uiw:linkedin" />
-                        </span>
-                        {"    "}
-                        <span>Akinboboye Akinwande</span>
-                    </div>
-                    <div className="social">
-                        <span>
-                            <Icon icon="bi:github" />
-                        </span>
-                        {"    "}
-                        <span>Boboye-Ak</span>
-                    </div>
-                    <div className="social">
-                        <span>
-                            <Icon icon="icon-park:twitter" />
-                        </span>
-                        {"    "}
-                        <span>@Ak_bob_oye</span>
-                    </div>
-                </div>
+                )}
             </div>
             <div className="lower-third">
                 {" "}
