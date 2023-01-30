@@ -3,6 +3,13 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
 const ContactSection = ({ activePage, setActivePage, previousPage }) => {
+    const socialWhileHover = {
+        scale: 1.1,
+        textShadow: "0px 0px 8px rgb(255, 255, 255)",
+        boxShadow: "0px 0px 8px rgb(255, 255, 255)",
+        color: "aqua",
+    }
+
     const [hasBeenViewed, setHasBeenViewed] = useState(false)
 
     useEffect(() => {
@@ -28,6 +35,7 @@ const ContactSection = ({ activePage, setActivePage, previousPage }) => {
                 </div>
             </div>
             <div className="middle-third">
+                <h1>Contact</h1>
                 {(activePage == "contact" || hasBeenViewed) && (
                     <div className="social-list">
                         <motion.div
@@ -36,15 +44,33 @@ const ContactSection = ({ activePage, setActivePage, previousPage }) => {
                             animate={{ x: "0" }}
                             transition={{ type: "spring", stiffness: 120, delay: 0.3 }}
                         >
-                            <motion.div className="social">
+                            <motion.a
+                                className="social"
+                                whileHover={socialWhileHover}
+                                href="tel:+2348120460453"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <Icon icon="material-symbols:contact-phone" />
-                            </motion.div>
-                            <motion.div className="social">
-                                <Icon icon="logos:google-gmail" />
-                            </motion.div>
-                            <motion.div className="social">
-                                <Icon icon="uiw:linkedin" />
-                            </motion.div>
+                            </motion.a>
+                            <motion.a
+                                className="social"
+                                whileHover={socialWhileHover}
+                                href="mailto:boboye771@gmail.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Icon icon="mdi:gmail" />
+                            </motion.a>
+                            <motion.a
+                                className="social"
+                                whileHover={socialWhileHover}
+                                href="https://www.linkedin.com/in/akinboboye-akinwande-782552106/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Icon icon="mdi:linkedin" />
+                            </motion.a>
                         </motion.div>
                         <motion.div
                             className="social-row"
@@ -52,13 +78,33 @@ const ContactSection = ({ activePage, setActivePage, previousPage }) => {
                             animate={{ x: "0" }}
                             transition={{ type: "spring", stiffness: 120, delay: 0.3 }}
                         >
-                            <motion.div className="social">
-                                <Icon icon="bi:github" />
-                            </motion.div>
-                            <motion.div className="social">
-                                <Icon icon="icon-park:twitter" />
-                            </motion.div>
-                            <motion.div className="social"><Icon icon="skill-icons:instagram"/></motion.div>
+                            <motion.a
+                                className="social"
+                                whileHover={socialWhileHover}
+                                href="https://github.com/Boboye-Ak"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Icon icon="mdi:github" />
+                            </motion.a>
+                            <motion.a
+                                className="social"
+                                whileHover={socialWhileHover}
+                                href="https://twitter.com/Ak_Bob_oye"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Icon icon="mdi:twitter" />
+                            </motion.a>
+                            <motion.a
+                                className="social"
+                                whileHover={socialWhileHover}
+                                href="https://www.instagram.com/boboye_ak/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Icon icon="mdi:instagram" />
+                            </motion.a>
                         </motion.div>
                     </div>
                 )}
