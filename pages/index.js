@@ -29,12 +29,20 @@ export default function Home() {
         }
     }
 
+    const handleUpButton = () => {
+        setActivePage(previousPage)
+    }
+
     useEffect(() => {
         const keyDownHandler = (event) => {
-            if (event.key === "Enter" || event.code === "Space") {
+            if (event.key === "Enter" || event.code === "Space"||event.keyCode==40) {
                 handleEnterButton()
             }
+            if (event.keyCode == 38) {
+                handleUpButton()
+            }
         }
+
         document.addEventListener("keydown", keyDownHandler)
 
         return () => {

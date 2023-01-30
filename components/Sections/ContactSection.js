@@ -3,6 +3,11 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
 const ContactSection = ({ activePage, setActivePage, previousPage }) => {
+    const initialSocial = {
+        scale: 1.0,
+        textShadow: "0px 0px 2px rgb(255, 255, 255)",
+        boxShadow: "0px 0px 2px rgb(255, 255, 255)",
+    }
     const socialWhileHover = {
         scale: 1.1,
         textShadow: "0px 0px 8px rgb(255, 255, 255)",
@@ -35,7 +40,7 @@ const ContactSection = ({ activePage, setActivePage, previousPage }) => {
                 </div>
             </div>
             <div className="middle-third">
-                <h1>Contact</h1>
+                <h1>Contact Me</h1>
                 {(activePage == "contact" || hasBeenViewed) && (
                     <div className="social-list">
                         <motion.div

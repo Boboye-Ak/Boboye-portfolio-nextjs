@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
 const resumePagesImages = [
@@ -31,6 +31,23 @@ const ResumeSection = ({ activePage, setActivePage, previousPage: previousSectio
             }
         })
     }
+    useEffect(() => {
+        const keyDownHandler = (event) => {
+            if (activePage == "resume") {
+                if (event.keyCode == 37) {
+                    previousPage()
+                }
+                if (event.keyCode == 39) {
+                    nextPage()
+                }
+            }
+        }
+        document.addEventListener("keydown", keyDownHandler)
+
+        return () => {
+            document.removeEventListener("keydown", keyDownHandler)
+        }
+    })
     return (
         <div
             className={`section resume ${activePage != "resume" && "hidden"} ${
@@ -49,7 +66,7 @@ const ResumeSection = ({ activePage, setActivePage, previousPage: previousSectio
                 </div>
             </div>
             <div className="middle-third">
-                {(activePage=="resume"||hasBeenViewed)&&<div className="resume-page">
+                <div className="resume-page">
                     <a
                         className="download-resume"
                         href="Akinboboye Akinwande Resume.pdf"
@@ -86,7 +103,7 @@ const ResumeSection = ({ activePage, setActivePage, previousPage: previousSectio
                     >
                         <Icon icon="material-symbols:navigate-next" />
                     </div>
-                </div>}
+                </div>
             </div>
             <div className="lower-third">
                 {" "}

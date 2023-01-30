@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Icon } from "@iconify/react"
 import Project from "../Project/Project"
 
@@ -86,8 +86,29 @@ const ProjectsSection = ({ activePage, setActivePage, previousPage }) => {
             }
         })
     }
+    useEffect(() => {
+        const keyDownHandler = (event) => {
+            if (activePage == "projects") {
+                if (event.keyCode == 37) {
+                    previousProject()
+                }
+                if (event.keyCode == 39) {
+                    nextProject()
+                }
+            }
+        }
+        document.addEventListener("keydown", keyDownHandler)
+
+        return () => {
+            document.removeEventListener("keydown", keyDownHandler)
+        }
+    })
     return (
-        <div className={`section projects ${activePage != "projects" && "hidden"} ${previousPage=="projects"&& "previous"}`}>
+        <div
+            className={`section projects ${activePage != "projects" && "hidden"} ${
+                previousPage == "projects" && "previous"
+            }`}
+        >
             <div className="upper-third">
                 {" "}
                 <div
