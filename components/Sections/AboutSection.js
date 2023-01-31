@@ -9,6 +9,7 @@ const aboutText =
 const AboutSection = ({ activePage, setActivePage, previousPage }) => {
     const [showArrow, setShowArrow] = useState(true)
     const [hasBeenViewed, setHasBeenViewed] = useState(false)
+    const [showInstructions, setShowInstructions]=useState(true)
     useEffect(() => {
         if (!hasBeenViewed && activePage == "about") {
             setHasBeenViewed(true)

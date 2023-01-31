@@ -1,4 +1,3 @@
-
 import "@/styles/globals.css"
 import "@/styles/Sidebars/sidebar-mobile.css"
 import "@/styles/Sidebars/sidebar-pc.css"
@@ -8,7 +7,7 @@ import "@/styles/Sections/resume-section.css"
 import "@/styles/Sections/projects-section.css"
 import "@/styles/Sections/contact-section.css"
 import "@/styles/arrows.css"
-import "@/styles/notification-bar.css"
+import "@/styles/instructions.css"
 import Head from "next/head"
 import { Inter } from "@next/font/google"
 

@@ -1,0 +1,56 @@
+.instructions-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 1, 0.8);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.instructions-container .pc-instruction {
+    width: 25%;
+    height: 60%;
+    color: white;
+    padding-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.instructions-container .pc-instruction .icons {
+    text-align: center;
+    font-size: 50px;
+}
+.instructions-container .pc-instruction p {
+    font-size: 25px;
+}
+.instructions-container .mobile-instruction {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+    /* For mobile phones: */
+    .instructions-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .instructions-container .pc-instruction {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* For PC+ */
+    .instructions-container .mobile-instruction {
+        display: none;
+    }
+}

@@ -123,7 +123,7 @@
     background-color: black;
     color: green;
     margin-left: 1em;
-    overflow-y: scroll;
+    
 }
 .section.projects .middle-third .projects-container .project-details h2 {
     text-align: center;
@@ -232,6 +232,7 @@
         width: 95%;
         height: 0;
         transition: height 0.4s ease-in-out;
+        overflow-y: scroll;
     }
     .section.projects .middle-third .projects-container .project-details.clicked {
         display: block;
