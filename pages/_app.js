@@ -1,4 +1,4 @@
-import NotificationBar from "@/components/NotificationBar/NotificationBar"
+
 import "@/styles/globals.css"
 import "@/styles/Sidebars/sidebar-mobile.css"
 import "@/styles/Sidebars/sidebar-pc.css"
@@ -32,7 +32,6 @@ export default function App({ Component, pageProps }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href={boboyeBitmojis[iconSelector]} />
             </Head>
-            <NotificationBar imgSrc={boboyeBitmojis[iconSelector]}/>
             <Component {...pageProps} />
         </>
     )

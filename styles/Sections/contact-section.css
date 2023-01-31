@@ -75,11 +75,14 @@
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
+    .section.contact .middle-third .social-list {
+        height: 60%;
+    }
 
     .section.contact .middle-third .social-list .social {
         width: 30%;
         height: 80%;
-        font-size: 4em;
+        font-size: 5em;
     }
     .section.contact .upper-third {
         justify-content: center;

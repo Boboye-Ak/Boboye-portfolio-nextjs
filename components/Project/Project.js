@@ -48,12 +48,18 @@ const Project = ({ project, active, projects }) => {
                     </p>
                 </div>
             </div>
-            <div className={`project-details ${isClicked && "clicked"}`}>
+            <div
+                className={`project-details ${isClicked && "clicked"}`}
+                onClick={() => {
+                    setIsClicked(!isClicked)
+                }}
+            >
+                <h2>Tools Used</h2>
                 <ul>
                     {project?.technologiesUsed.map((technology, index) => {
                         return (
                             <li key={index}>
-                                {(isClicked||hasBeenClicked) && (
+                                {(isClicked || hasBeenClicked) && (
                                     <Typewriter
                                         onInit={(typewriter) => {
                                             typewriter.typeString(`> ${technology}`).start()
@@ -64,6 +70,7 @@ const Project = ({ project, active, projects }) => {
                         )
                     })}
                 </ul>
+                <h2>Links</h2>
                 <div className="project-links live-link">
                     <a href={project?.liveLink} target="_blank" rel="noopener noreferrer">
                         <Icon icon="mdi:internet" />

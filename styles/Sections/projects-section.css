@@ -123,7 +123,10 @@
     background-color: black;
     color: green;
     margin-left: 1em;
-    overflow: hidden;
+    overflow-y: scroll;
+}
+.section.projects .middle-third .projects-container .project-details h2 {
+    text-align: center;
 }
 
 .section.projects .middle-third .projects-container .project-details.clicked {
@@ -148,7 +151,6 @@
     font-family: monospace;
 }
 .section.projects .middle-third .projects-container .project-details.clicked ul li:before {
-    
 }
 
 .section.projects .middle-third .change-project-set {
@@ -222,17 +224,20 @@
     .section.projects .middle-third .projects-container .project.clicked {
         width: 90%;
         height: 50%;
+        display: none;
     }
     .section.projects .middle-third .projects-container .project-details {
+        display: none;
         opacity: 0;
         width: 95%;
         height: 0;
         transition: height 0.4s ease-in-out;
     }
     .section.projects .middle-third .projects-container .project-details.clicked {
+        display: block;
         opacity: 1;
         width: 90%;
-        height: 40%;
+        height: 60%;
         margin-top: 10px;
     }
 }
