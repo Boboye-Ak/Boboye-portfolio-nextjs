@@ -6,6 +6,16 @@
     justify-content: flex-end;
     align-items: center;
 }
+.section.home .upper-half .smiling-bitmoji {
+    width: 100px;
+    height: 100px;
+}
+
+.section.home .upper-half .smiling-bitmoji img {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
 
 .section.home .upper-half .name {
     font-size: 55px;

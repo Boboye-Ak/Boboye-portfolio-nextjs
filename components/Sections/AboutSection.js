@@ -37,7 +37,7 @@ const AboutSection = ({ activePage, setActivePage, previousPage }) => {
                     <motion.p
                         initial={{ fontSize: "1em", scaleY: 0 }}
                         animate={{ fontSize: "1.2em", scaleY: 1 }}
-                        transition={{ type: "spring", delay: 1, duration: 0.3 }}
+                        transition={{ type: "spring", delay: 0.5, duration: 0.3 }}
                     >
                         {aboutText}
                     </motion.p>

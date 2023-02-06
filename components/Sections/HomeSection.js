@@ -4,15 +4,32 @@ import Typewriter from "typewriter-effect"
 import { motion } from "framer-motion"
 import Instructions from "../Instructions/Instructions"
 
-const HomeSection = ({ activePage, setActivePage, previousPage }) => {
+const HomeSection = ({ activePage, setActivePage, previousPage, showInstructions }) => {
     const [showArrow, setShowArrow] = useState(true)
-    const [showInstructions, setShowInstructions] = useState(true)
+    const [windowWidth, setWindowWidth] = useState(0)
+    const [mousePos, setMousePos] = useState({})
+    const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
-        setTimeout(() => {
-            setShowInstructions(false)
-        }, 5000)
+        setWindowWidth(window.innerWidth)
+
+        if (window.innerWidth < 769) {
+            setIsMobile(true)
+        }
+        const handleMouseMove = (event) => {
+            setMousePos({
+                x: event.clientX - event.target.offsetLeft,
+                y: event.clientY - event.target.offsetTop,
+            })
+        }
+
+        window.addEventListener("mousemove", handleMouseMove)
+
+        return () => {
+            window.removeEventListener("mousemove", handleMouseMove)
+        }
     }, [])
+
     return (
         <>
             {showInstructions && <Instructions />}
@@ -23,6 +40,15 @@ const HomeSection = ({ activePage, setActivePage, previousPage }) => {
             >
                 {!showInstructions && (
                     <div className="upper-half">
+                        {!isMobile && (
+                            <div className="smiling-bitmoji">
+                                {mousePos?.x >= windowWidth * 0.6 ? (
+                                    <img src="/bitmojis/smiling-bitmoji-looking-right.png" />
+                                ) : (
+                                    <img src="/bitmojis/smiling-bitmoji-looking-left.png" />
+                                )}
+                            </div>
+                        )}
                         <motion.div
                             className="name"
                             initial={{ opacity: 0 }}

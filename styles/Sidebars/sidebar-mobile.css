@@ -5,6 +5,7 @@
     z-index: 8;
     color: white;
     font-size: 50px;
+    cursor: pointer;
 }
 
 .sidebar-mobile {

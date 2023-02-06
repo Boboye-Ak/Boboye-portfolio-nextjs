@@ -9,29 +9,38 @@ import ContactSection from "@/components/Sections/ContactSection"
 import ScrollBar from "@/components/ScrollBar/ScrollBar"
 
 export default function Home() {
+    const [showInstructions, setShowInstructions] = useState(true)
     const [activePage, setActivePage] = useState("home")
     const [previousPage, setPreviousPage] = useState("contact")
     const handleEnterButton = () => {
-        if (activePage == "home") {
-            setActivePage("about")
+        if(!showInstructions){
+            if (activePage == "home") {
+                setActivePage("about")
+            }
+            if (activePage == "about") {
+                setActivePage("resume")
+            }
+            if (activePage == "resume") {
+                setActivePage("projects")
+            }
+            if (activePage == "projects") {
+                setActivePage("contact")
+            }
+            if (activePage == "contact") {
+                setActivePage("home")
+            }
         }
-        if (activePage == "about") {
-            setActivePage("resume")
-        }
-        if (activePage == "resume") {
-            setActivePage("projects")
-        }
-        if (activePage == "projects") {
-            setActivePage("contact")
-        }
-        if (activePage == "contact") {
-            setActivePage("home")
-        }
+
     }
 
     const handleUpButton = () => {
         setActivePage(previousPage)
     }
+    useEffect(() => {
+        setTimeout(() => {
+            setShowInstructions(false)
+        }, 5000)
+    }, [])
 
     useEffect(() => {
         const keyDownHandler = (event) => {
@@ -88,6 +97,7 @@ export default function Home() {
                     setActivePage={setActivePage}
                     previousPage={previousPage}
                     setPreviousPage={setPreviousPage}
+                    showInstructions={showInstructions}
                 />
                 <AboutSection
                     activePage={activePage}
