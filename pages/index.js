@@ -35,7 +35,7 @@ export default function Home() {
 
     useEffect(() => {
         const keyDownHandler = (event) => {
-            if (event.key === "Enter" || event.code === "Space"||event.keyCode==40) {
+            if (event.key === "Enter" || event.code === "Space" || event.keyCode == 40) {
                 handleEnterButton()
             }
             if (event.keyCode == 38) {

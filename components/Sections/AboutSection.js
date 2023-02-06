@@ -9,7 +9,7 @@ const aboutText =
 const AboutSection = ({ activePage, setActivePage, previousPage }) => {
     const [showArrow, setShowArrow] = useState(true)
     const [hasBeenViewed, setHasBeenViewed] = useState(false)
-    const [showInstructions, setShowInstructions]=useState(true)
+
     useEffect(() => {
         if (!hasBeenViewed && activePage == "about") {
             setHasBeenViewed(true)
@@ -35,9 +35,9 @@ const AboutSection = ({ activePage, setActivePage, previousPage }) => {
             <div className="middle-third">
                 {(activePage == "about" || hasBeenViewed) && (
                     <motion.p
-                        initial={{ fontSize: "1em", rotateZ: 180 }}
-                        animate={{ fontSize: "1.2em", rotateZ: 0 }}
-                        transition={{ type: "spring", delay: 0.5, duration: 0.5 }}
+                        initial={{ fontSize: "1em", scaleY: 0 }}
+                        animate={{ fontSize: "1.2em", scaleY: 1 }}
+                        transition={{ type: "spring", delay: 1, duration: 0.3 }}
                     >
                         {aboutText}
                     </motion.p>

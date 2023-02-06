@@ -36,7 +36,7 @@ const Instructions = () => {
                 <p>Use up button or click on up arrow to go to the previous page</p>
             </div>
             <div className="mobile-instruction">
-                <Icon icon="line-md:loading-twotone-loop"/>
+                <Icon icon="line-md:loading-twotone-loop" />
             </div>
         </motion.div>
     )
