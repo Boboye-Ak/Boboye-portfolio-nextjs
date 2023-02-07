@@ -2,12 +2,19 @@ import { Icon } from "@iconify/react"
 import { motion } from "framer-motion"
 
 const SideBarPC = ({ activePage, setActivePage }) => {
+    const socialHover = {
+        y: [0, -10, 0, -10, 0, -10, 0, -10, 0],
+        transition: {
+            duration: 1,
+        },
+    }
+
     return (
         <motion.div
             className="sidebar-pc"
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
-            transition={{ delay: 5.5, duration: 0.4, type:"tween" }}
+            transition={{ delay: 5.5, duration: 0.4, type: "tween" }}
         >
             <div className="profile-picture">
                 <img src="/developer-image.jpeg" />
@@ -65,22 +72,38 @@ const SideBarPC = ({ activePage, setActivePage }) => {
                 </div>
             </div>
             <div className="socials-list">
-                <a href="https://github.com/Boboye-Ak" target="_blank" rel="noopener noreferrer">
+                <motion.a
+                    href="https://github.com/Boboye-Ak"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ ...socialHover, color: "black" }}
+                >
                     <Icon icon="bi:github" />
-                </a>
-                <a
+                </motion.a>
+                <motion.a
                     href="https://www.linkedin.com/in/akinboboye-akinwande-782552106/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    whileHover={{ ...socialHover, color: "#0072b1" }}
                 >
                     <Icon icon="bi:linkedin" />
-                </a>
-                <a href="https://twitter.com/Ak_Bob_oye" target="_blank" rel="noopener noreferrer">
+                </motion.a>
+                <motion.a
+                    href="https://twitter.com/Ak_Bob_oye"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ ...socialHover, color: "#00acee" }}
+                >
                     <Icon icon="bi:twitter" />
-                </a>
-                <a href="mailto:boboye771@gmail.com" target="_blank" rel="noopener noreferrer">
+                </motion.a>
+                <motion.a
+                    href="mailto:boboye771@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ ...socialHover, color: "#d44638" }}
+                >
                     <Icon icon="mdi:gmail" />
-                </a>
+                </motion.a>
             </div>
         </motion.div>
     )

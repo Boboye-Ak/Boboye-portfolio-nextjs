@@ -9,6 +9,8 @@
 .section.home .upper-half .smiling-bitmoji {
     width: 100px;
     height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .section.home .upper-half .smiling-bitmoji img {

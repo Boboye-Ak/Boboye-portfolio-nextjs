@@ -105,7 +105,10 @@ const ContactSection = ({ activePage, setActivePage, previousPage }) => {
                             </motion.a>
                             <motion.a
                                 className="social"
-                                whileHover={{ ...socialWhileHover, color: "#fa7e1e" }}
+                                whileHover={{
+                                    ...socialWhileHover,
+                                    color: "#fa7e1e",
+                                }}
                                 href="https://www.instagram.com/boboye_ak/"
                                 target="_blank"
                                 rel="noopener noreferrer"

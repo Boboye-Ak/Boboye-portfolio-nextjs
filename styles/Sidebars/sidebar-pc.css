@@ -87,10 +87,7 @@
     position: relative;
     bottom: 0;
 }
-.sidebar-pc .socials-list a:hover {
-    color: rgb(137, 137, 236);
-    bottom: 5px;
-}
+
 
 @media only screen and (max-width: 1024px) {
     /* For mobile phones: */
