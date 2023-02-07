@@ -32,7 +32,7 @@ const HomeSection = ({ activePage, setActivePage, previousPage, showInstructions
 
     return (
         <>
-            {showInstructions && <Instructions />}
+            {(showInstructions&&!isMobile) && <Instructions />}
             <div
                 className={`section home ${activePage != "home" ? "hidden" : undefined} ${
                     previousPage == "home" && "previous"
