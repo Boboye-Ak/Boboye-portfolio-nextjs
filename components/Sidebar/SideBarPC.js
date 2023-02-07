@@ -14,7 +14,7 @@ const SideBarPC = ({ activePage, setActivePage }) => {
             className="sidebar-pc"
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
-            transition={{ delay: 5.5, duration: 0.4, type: "tween" }}
+            transition={{ delay: 0.5, duration: 0.4, type: "tween" }}
         >
             <div className="profile-picture">
                 <img src="/developer-image.jpeg" />

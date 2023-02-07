@@ -5,8 +5,6 @@ import { motion } from "framer-motion"
 const ContactSection = ({ activePage, setActivePage, previousPage }) => {
     const initialSocial = {
         scale: 1.0,
-        textShadow: "0px 0px 2px rgb(255, 255, 255)",
-        boxShadow: "0px 0px 2px rgb(255, 255, 255)",
     }
     const socialWhileHover = {
         scale: 1.1,
@@ -14,6 +12,7 @@ const ContactSection = ({ activePage, setActivePage, previousPage }) => {
         boxShadow: "0px 0px 8px rgb(255, 255, 255)",
         transition: {
             duration: 0.1,
+            
         },
     }
 
@@ -53,6 +52,7 @@ const ContactSection = ({ activePage, setActivePage, previousPage }) => {
                         >
                             <motion.a
                                 className="social"
+                                initial={initialSocial}
                                 whileHover={{ ...socialWhileHover, color: "aqua" }}
                                 href="tel:+2348120460453"
                                 target="_blank"

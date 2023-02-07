@@ -13,7 +13,7 @@ export default function Home() {
     const [activePage, setActivePage] = useState("home")
     const [previousPage, setPreviousPage] = useState("contact")
     const handleEnterButton = () => {
-        if(!showInstructions){
+        if (!showInstructions) {
             if (activePage == "home") {
                 setActivePage("about")
             }
@@ -30,16 +30,24 @@ export default function Home() {
                 setActivePage("home")
             }
         }
-
     }
 
     const handleUpButton = () => {
         setActivePage(previousPage)
     }
     useEffect(() => {
+        let timeout
+        const isVisitedFromStorage = localStorage.getItem("isVisited")
+        if (!isVisitedFromStorage) {
+            timeout = 5000
+            localStorage.setItem("isVisited", "true")
+        } else {
+            timeout = 0
+        }
+
         setTimeout(() => {
             setShowInstructions(false)
-        }, 5000)
+        }, timeout)
     }, [])
 
     useEffect(() => {
@@ -85,12 +93,14 @@ export default function Home() {
                 previousPage={previousPage}
                 setPreviousPage={setPreviousPage}
             />
-            <SideBar
-                activePage={activePage}
-                setActivePage={setActivePage}
-                previousPage={previousPage}
-                setPreviousPage={setPreviousPage}
-            />
+            {!showInstructions && (
+                <SideBar
+                    activePage={activePage}
+                    setActivePage={setActivePage}
+                    previousPage={previousPage}
+                    setPreviousPage={setPreviousPage}
+                />
+            )}
             <div className="section-container">
                 <HomeSection
                     activePage={activePage}
