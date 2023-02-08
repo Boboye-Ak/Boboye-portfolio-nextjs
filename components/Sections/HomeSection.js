@@ -9,6 +9,8 @@ const HomeSection = ({ activePage, setActivePage, previousPage, showInstructions
     const [windowWidth, setWindowWidth] = useState(0)
     const [mousePos, setMousePos] = useState({})
     const [isMobile, setIsMobile] = useState(false)
+    const [isWinking, setIsWinking] = useState(false)
+    const [isSparkling, setIsSparkling] = useState(false)
 
     useEffect(() => {
         setWindowWidth(window.innerWidth)
@@ -40,15 +42,36 @@ const HomeSection = ({ activePage, setActivePage, previousPage, showInstructions
             >
                 {!showInstructions && (
                     <div className="upper-half">
-                        { (
-                            <div className="smiling-bitmoji">
-                                {mousePos?.x >= windowWidth * 0.6 ? (
-                                    <img src="/bitmojis/smiling-bitmoji-looking-right.png" />
-                                ) : (
-                                    <img src="/bitmojis/smiling-bitmoji-looking-left.png" />
+                        {
+                            <div
+                                className="smiling-bitmoji"
+                                onMouseEnter={() => {
+                                    setIsWinking(true)
+                                }}
+                                onMouseLeave={() => {
+                                    setIsWinking(false)
+                                    setIsSparkling(false)
+                                }}
+                                onClick={() => {
+                                    setIsWinking(false)
+                                    setIsSparkling(!isSparkling)
+                                }}
+                            >
+                                {!isSparkling &&
+                                    !isWinking &&
+                                    (mousePos?.x >= windowWidth * 0.6 ? (
+                                        <img src="/bitmojis/smiling-bitmoji-looking-right.png" />
+                                    ) : (
+                                        <img src="/bitmojis/smiling-bitmoji-looking-left.png" />
+                                    ))}
+                                {isWinking && !isSparkling && (
+                                    <img src="/bitmojis/Boboye-bitmoji-wink.png" />
+                                )}
+                                {isSparkling && (
+                                    <img src="/bitmojis/Boboye-bitmoji-sparkle-smile.png" />
                                 )}
                             </div>
-                        )}
+                        }
                         <motion.div
                             className="name"
                             initial={{ opacity: 0 }}
