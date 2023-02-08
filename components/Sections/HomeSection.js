@@ -18,8 +18,8 @@ const HomeSection = ({ activePage, setActivePage, previousPage, showInstructions
         }
         const handleMouseMove = (event) => {
             setMousePos({
-                x: event.clientX - event.target.offsetLeft,
-                y: event.clientY - event.target.offsetTop,
+                x: event.clientX,
+                y: event.clientY,
             })
         }
 
@@ -32,7 +32,7 @@ const HomeSection = ({ activePage, setActivePage, previousPage, showInstructions
 
     return (
         <>
-            {(showInstructions&&!isMobile) && <Instructions />}
+            {showInstructions && !isMobile && <Instructions />}
             <div
                 className={`section home ${activePage != "home" ? "hidden" : undefined} ${
                     previousPage == "home" && "previous"
@@ -40,7 +40,7 @@ const HomeSection = ({ activePage, setActivePage, previousPage, showInstructions
             >
                 {!showInstructions && (
                     <div className="upper-half">
-                        {!isMobile && (
+                        { (
                             <div className="smiling-bitmoji">
                                 {mousePos?.x >= windowWidth * 0.6 ? (
                                     <img src="/bitmojis/smiling-bitmoji-looking-right.png" />
