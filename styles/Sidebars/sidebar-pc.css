@@ -88,7 +88,6 @@
     bottom: 0;
 }
 
-
 @media only screen and (max-width: 1024px) {
     /* For mobile phones: */
     .sidebar-pc {
