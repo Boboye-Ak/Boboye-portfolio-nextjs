@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 const resumePagesImages = [
     "resume pages/Akinboboye Akinwande Resume_01.jpg",
     "resume pages/Akinboboye Akinwande Resume_02.jpg",
-    "resume pages/Akinboboye Akinwande Resume_03.jpg",
+    "resume pages/Akinboboye Akinwande Resume_03.jpg","resume pages/Akinboboye Akinwande Resume_04.jpg","resume pages/Akinboboye Akinwande Resume_05.jpg"
 ]
 
 const ResumeSection = ({ activePage, setActivePage, previousPage: previousSection }) => {
